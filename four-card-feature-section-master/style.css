@@ -1,0 +1,176 @@
+:root {
+
+    /* Color Pallete */
+    --color-red: #EA5454;
+    --color-cyan: #44D3D2;
+    --color-orange: #FCAE4A;
+    --color-blue: #549EF2;
+    --color-dark: #4D4F62;
+    --color-white: #fff;
+
+}
+
+/* 355px - mobile */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* font-family: "Poppins", sans-serif; */
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--color-white);
+    font-family: "Poppins", sans-serif;
+    margin: 58px 24px;
+    text-align: center;
+}
+
+/* .container {
+    
+} */
+
+h2 {
+    font-size: 24px;
+    color: var(--color-dark);
+}
+
+h2:first-child {
+    font-weight: 300;
+}
+
+h2:nth-child(2) {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.add-info {
+    font-size: 15px;
+    font-weight: 200;
+    padding: 0 4px 68px 0;
+    opacity: 0.6;
+}
+
+
+/* Cards */
+.cards {
+    display: grid;
+    gap: 35px;
+}
+
+.card-1,
+.card-2,
+.card-3,
+.card-4 {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 5px rgb(0 0 0 / 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.card-1 {
+    border-top: hsl(212, 86%, 64%) 4px solid;
+}
+
+.card-2 {
+    border-top: hsl(0, 78%, 62%) 4px solid;
+}
+
+.card-3 {
+    border-top: hsl(34, 97%, 64%) 4px solid;
+}
+
+.card-4 {
+    border-top: hsl(180, 62%, 55%) 4px solid;
+}
+
+.svg-position {
+    align-self: flex-end;
+}
+
+.card-title {
+    align-self: flex-start;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4D4F62;
+}
+
+.card-info {
+    text-align: left;
+    color: #4D4F62;
+    font-size: 13px;
+    padding: 1px 0 33px 0;
+    opacity: 0.5;
+}
+
+
+@media (min-width: 356px) {
+
+    .section {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cards {
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 30px;
+        grid-template-areas:
+            ".     card-1     ."
+            "card-2 card-1 card-3"
+            "card-2 card-4 card-3"
+            ".     card-4     ."
+        ;
+    }
+
+    .card-1 {
+        grid-area: card-2;
+    }
+
+    .card-2 {
+        grid-area: card-1;
+    }
+
+    .card-3 {
+        grid-area: card-3;
+    }
+
+    .card-4 {
+        grid-area: card-4;
+    }
+
+    h2 {
+        font-size: 36px;
+        color: var(--color-dark);
+    }
+        
+    .add-info {
+        padding: 0 480px 68px;
+        
+    }
+}
+
+/* 
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 30px;
+    grid-template-areas: 
+    ".     card1     ."
+    "card2 card1 card3"
+    "card2 card4 card3"
+    ".     card4     ."
+    ;
+}
+
+.card1 {grid-area: card1;}
+.card2 {grid-area: card2;}
+.card3 {grid-area: card3;}
+.card4 {grid-area: card4;}
+*/
